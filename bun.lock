@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@ankhorage/docker-compose",
+      "name": "@ankhorage/infra-docker-compose",
       "dependencies": {
         "@ankhorage/contracts": "^19.1.0",
       },

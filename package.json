@@ -1,5 +1,5 @@
 {
-  "name": "@ankhorage/docker-compose",
+  "name": "@ankhorage/infra-docker-compose",
   "version": "0.5.3",
   "description": "Docker Compose runtime adapter for provider-neutral Ankhorage infrastructure.",
   "type": "module",
@@ -9,11 +9,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ankhorage/docker-compose.git"
+    "url": "git+https://github.com/ankhorage/infra-docker-compose.git"
   },
-  "homepage": "https://github.com/ankhorage/docker-compose#readme",
+  "homepage": "https://github.com/ankhorage/infra-docker-compose#readme",
   "bugs": {
-    "url": "https://github.com/ankhorage/docker-compose/issues"
+    "url": "https://github.com/ankhorage/infra-docker-compose/issues"
   },
   "keywords": [
     "ankhorage",

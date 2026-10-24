@@ -4,7 +4,7 @@
 
 ## Repository
 
-Package: `@ankhorage/docker-compose`
+Package: `@ankhorage/infra-docker-compose`
 
 Docker Compose runtime adapter for provider-neutral Ankhorage infrastructure.
 
