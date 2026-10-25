@@ -1,11 +1,11 @@
 import { expect, it } from 'bun:test';
 
-import { inspectDockerComposeProjectAsync } from './features/compose-runtime/adapters/inspectDockerComposeProjectAsync';
+import { inspectDockerComposeProjectAsync } from './features/compose-runtime/adapters/inspectDockerComposeProjectAsync.js';
 import type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
-} from './index';
+} from './index.js';
 
 const identity = {
   projectId: 'sample',

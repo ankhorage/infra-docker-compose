@@ -1,11 +1,11 @@
 import { expect, it } from 'bun:test';
 
-import { removeDockerComposeResourcesAsync } from './features/compose-runtime/adapters/removeDockerComposeResourcesAsync';
+import { removeDockerComposeResourcesAsync } from './features/compose-runtime/adapters/removeDockerComposeResourcesAsync.js';
 import type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
-} from './index';
+} from './index.js';
 
 const identity = {
   projectId: 'sample',

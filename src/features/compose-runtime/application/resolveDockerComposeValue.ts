@@ -5,7 +5,7 @@ import type {
   InfraWorkloadValue,
 } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeSecretValueSegment } from '../../../types/dockerComposeRuntime';
+import type { DockerComposeSecretValueSegment } from '../../../types/dockerComposeRuntime.js';
 
 export type ResolvedDockerComposeValue =
   | { readonly kind: 'public'; readonly value: string }

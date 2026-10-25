@@ -7,14 +7,14 @@ import type {
 import type {
   DockerComposeAdapterOptions,
   DockerComposeDesiredState,
-} from '../../../types/dockerComposeRuntime';
+} from '../../../types/dockerComposeRuntime.js';
 import {
   createObservedDockerComposeOwner,
   getDockerComposeResources,
-} from '../utils/getDockerComposeResources';
-import { materializeDockerComposeSecretsAsync } from './materializeDockerComposeSecretsAsync';
-import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync';
-import { readDockerComposeOutputs } from './readDockerComposeOutputs';
+} from '../utils/getDockerComposeResources.js';
+import { materializeDockerComposeSecretsAsync } from './materializeDockerComposeSecretsAsync.js';
+import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync.js';
+import { readDockerComposeOutputs } from './readDockerComposeOutputs.js';
 
 /*** Materialize secrets, converge Compose resources, prune stale owned state and wait for readiness. */
 export async function ensureDockerComposeRuntimeAsync(

@@ -1,11 +1,11 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
 import type {
   DockerComposeProjectIdentity,
   DockerComposeProjectObservation,
-} from '../../../types/dockerComposeRuntime';
-import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync.js';
 
 /*** Poll exact owned Compose state until ready, failed, aborted or timed out. */
 export async function waitForDockerComposeProjectAsync(

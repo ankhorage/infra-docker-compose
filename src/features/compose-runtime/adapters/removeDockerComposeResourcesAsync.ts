@@ -1,9 +1,9 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
-import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime';
-import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters';
-import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
+import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime.js';
+import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters.js';
+import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync.js';
 
 /*** Remove only exact owned resource IDs, preserving the caller's dependency-safe ordering. */
 export async function removeDockerComposeResourcesAsync(

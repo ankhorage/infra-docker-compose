@@ -3,7 +3,7 @@ import type { InfraOwnedResource } from '@ankhorage/contracts/infra';
 import type {
   DockerComposeOutput,
   DockerComposeProjectObservation,
-} from '../../../types/dockerComposeRuntime';
+} from '../../../types/dockerComposeRuntime.js';
 
 /*** Read safe public outputs for the selected owned resources. */
 export function readDockerComposeOutputs(

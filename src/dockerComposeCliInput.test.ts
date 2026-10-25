@@ -1,13 +1,13 @@
 import { expect, it } from 'bun:test';
 
-import { renderDockerComposeCliInput } from './features/compose-runtime/adapters/renderDockerComposeCliInput';
+import { renderDockerComposeCliInput } from './features/compose-runtime/adapters/renderDockerComposeCliInput.js';
 import type {
   DockerComposeConfig,
   DockerComposeExecutionProject,
   DockerComposeMaterializedSecret,
   DockerComposeService,
-} from './index';
-import { createSubprocessDockerComposeCommandRunner } from './index';
+} from './index.js';
+import { createSubprocessDockerComposeCommandRunner } from './index.js';
 
 const configContent =
   'CREATE FUNCTION sample() RETURNS void AS $$ BEGIN RETURN; END; $$ LANGUAGE plpgsql;';

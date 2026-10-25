@@ -4,8 +4,8 @@ import type {
   DockerComposeProjectIdentity,
   DockerComposeProjectObservation,
   DockerComposeResourceObservation,
-} from '../../../types/dockerComposeRuntime';
-import { DOCKER_COMPOSE_LABELS } from '../utils/dockerComposeLabels';
+} from '../../../types/dockerComposeRuntime.js';
+import { DOCKER_COMPOSE_LABELS } from '../utils/dockerComposeLabels.js';
 import {
   getString,
   getValue,
@@ -18,13 +18,13 @@ import {
   parseDockerDocument,
   requireRecord,
   requireString,
-} from '../utils/dockerJson';
-import { mergeDockerComposeServiceReplicas } from '../utils/mergeDockerComposeServiceReplicas';
+} from '../utils/dockerJson.js';
+import { mergeDockerComposeServiceReplicas } from '../utils/mergeDockerComposeServiceReplicas.js';
 import {
   type DockerComposeInventoryEntry,
   type DockerComposeInventoryPort,
   parseDockerComposeInventory,
-} from '../utils/parseDockerComposeInventory';
+} from '../utils/parseDockerComposeInventory.js';
 
 interface DockerComposeInspectionInput {
   readonly identity: DockerComposeProjectIdentity;

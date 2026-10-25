@@ -5,8 +5,8 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { expect, it } from 'bun:test';
 
-import { createInfraAdapter } from './index';
-import { FakeDockerComposeControlPlane } from './runtimeFixtures.test';
+import { createInfraAdapter } from './index.js';
+import { FakeDockerComposeControlPlane } from './runtimeFixtures.test.js';
 
 it('materializes privileged templates only at reconcile and keeps public templates public', async () => {
   const controlPlane = new FakeDockerComposeControlPlane();
@@ -77,7 +77,9 @@ function createContext(): InfraExecutionContext {
       },
     },
     credentials: {
+      findAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
       resolveAsync: () => Promise.resolve({ ok: true, value: {}, diagnostics: [] }),
+      persistAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
     },
     secrets: {
       resolveAsync: () => Promise.resolve({ ok: true, value: 'runtime-secret', diagnostics: [] }),

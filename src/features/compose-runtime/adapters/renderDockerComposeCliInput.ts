@@ -1,12 +1,12 @@
-import type { DockerComposeCliInput } from '../../../types/dockerComposeProcess';
+import type { DockerComposeCliInput } from '../../../types/dockerComposeProcess.js';
 import type {
   DockerComposeExecutionProject,
   DockerComposeMaterializedSecret,
   DockerComposeResource,
   DockerComposeService,
-} from '../../../types/dockerComposeRuntime';
-import { DOCKER_COMPOSE_LABELS } from '../utils/dockerComposeLabels';
-import { toComposeName } from '../utils/getDockerComposeProjectIdentity';
+} from '../../../types/dockerComposeRuntime.js';
+import { DOCKER_COMPOSE_LABELS } from '../utils/dockerComposeLabels.js';
+import { toComposeName } from '../utils/getDockerComposeProjectIdentity.js';
 
 type DockerComposeCliResource = DockerComposeResource | DockerComposeMaterializedSecret;
 interface SecretBinding {

@@ -1,6 +1,6 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
 
 interface DockerComposeEngineCommand {
   readonly arguments: readonly string[];

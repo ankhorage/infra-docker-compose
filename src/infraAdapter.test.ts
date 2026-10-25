@@ -1,8 +1,8 @@
 import { INFRA_ADAPTER_CATALOG, isInfraAdapterDescriptor } from '@ankhorage/contracts/infra';
 import { describe, expect, it } from 'bun:test';
 
-import { createInfraAdapter, infraAdapterDescriptor } from './index';
-import { FakeDockerComposeControlPlane } from './runtimeFixtures.test';
+import { createInfraAdapter, infraAdapterDescriptor } from './index.js';
+import { FakeDockerComposeControlPlane } from './runtimeFixtures.test.js';
 
 describe('Docker Compose runtime adapter', () => {
   it('exports the exact Contracts catalog descriptor', () => {

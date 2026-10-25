@@ -9,9 +9,9 @@ import type {
   DockerComposeDesiredState,
   DockerComposeProjectObservation,
   DockerComposeResource,
-} from '../../../types/dockerComposeRuntime';
-import { getDockerComposeResources } from '../utils/getDockerComposeResources';
-import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { getDockerComposeResources } from '../utils/getDockerComposeResources.js';
+import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync.js';
 
 /*** Plan deterministic Compose create, update, retain and delete operations without mutation. */
 export async function planDockerComposeRuntimeAsync(

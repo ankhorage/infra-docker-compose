@@ -3,15 +3,15 @@ import type { InfraResult } from '@ankhorage/contracts/infra';
 import type {
   DockerComposeEngineSession,
   DockerComposeSessionResolver,
-} from '../../../types/dockerComposeProcess';
-import type { DockerComposeControlPlane } from '../../../types/dockerComposeRuntime';
-import { createLocalDockerComposeSessionResolver } from './createLocalDockerComposeSessionResolver';
-import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync';
-import { reconcileDockerComposeProjectAsync } from './reconcileDockerComposeProjectAsync';
-import { removeDockerComposeResourcesAsync } from './removeDockerComposeResourcesAsync';
-import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync';
-import { stopDockerComposeProjectAsync } from './stopDockerComposeProjectAsync';
-import { waitForDockerComposeProjectAsync } from './waitForDockerComposeProjectAsync';
+} from '../../../types/dockerComposeProcess.js';
+import type { DockerComposeControlPlane } from '../../../types/dockerComposeRuntime.js';
+import { createLocalDockerComposeSessionResolver } from './createLocalDockerComposeSessionResolver.js';
+import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync.js';
+import { reconcileDockerComposeProjectAsync } from './reconcileDockerComposeProjectAsync.js';
+import { removeDockerComposeResourcesAsync } from './removeDockerComposeResourcesAsync.js';
+import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync.js';
+import { stopDockerComposeProjectAsync } from './stopDockerComposeProjectAsync.js';
+import { waitForDockerComposeProjectAsync } from './waitForDockerComposeProjectAsync.js';
 
 /** Create the concrete stateless Docker Compose CLI control plane. */
 export function createDockerComposeCliControlPlane(

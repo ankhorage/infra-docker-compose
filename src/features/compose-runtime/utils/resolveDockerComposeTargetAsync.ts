@@ -4,8 +4,8 @@ import type {
   DockerComposeDesiredState,
   DockerComposeProjectIdentity,
   DockerComposeTargetAccess,
-} from '../../../types/dockerComposeRuntime';
-import { getDockerComposeProjectIdentity } from './getDockerComposeProjectIdentity';
+} from '../../../types/dockerComposeRuntime.js';
+import { getDockerComposeProjectIdentity } from './getDockerComposeProjectIdentity.js';
 
 interface DockerComposeTargetResolution {
   readonly identity: DockerComposeProjectIdentity;

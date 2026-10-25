@@ -5,9 +5,9 @@ import type {
   DockerComposeDesiredState,
   DockerComposeProject,
   DockerComposeTargetAccess,
-} from '../../../types/dockerComposeRuntime';
-import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync';
-import { projectDockerComposeProject } from './projectDockerComposeProject';
+} from '../../../types/dockerComposeRuntime.js';
+import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync.js';
+import { projectDockerComposeProject } from './projectDockerComposeProject.js';
 
 interface PreparedDockerComposeRuntime {
   readonly project: DockerComposeProject;
