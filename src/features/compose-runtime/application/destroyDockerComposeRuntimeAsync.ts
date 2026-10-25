@@ -11,10 +11,10 @@ import type {
   DockerComposeAdapterOptions,
   DockerComposeDesiredState,
   DockerComposeResourceObservation,
-} from '../../../types/dockerComposeRuntime';
-import { createObservedDockerComposeOwner } from '../utils/getDockerComposeResources';
-import { orderDockerComposeResourceIdsForRemoval } from '../utils/orderDockerComposeResourceIdsForRemoval';
-import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { createObservedDockerComposeOwner } from '../utils/getDockerComposeResources.js';
+import { orderDockerComposeResourceIdsForRemoval } from '../utils/orderDockerComposeResourceIdsForRemoval.js';
+import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync.js';
 
 /*** Delete only owned and authorized Compose resources in reverse dependency order. */
 export async function destroyDockerComposeRuntimeAsync(

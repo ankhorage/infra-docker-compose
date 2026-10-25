@@ -1,14 +1,14 @@
 import type { InfraRuntimeAdapter } from '@ankhorage/contracts/infra';
 
-import { infraAdapterDescriptor } from '../../../constants/infra';
-import type { DockerComposeAdapterOptions } from '../../../types/dockerComposeRuntime';
-import { createDockerComposeCliControlPlane } from '../adapters/createDockerComposeCliControlPlane';
-import { destroyDockerComposeRuntimeAsync } from '../application/destroyDockerComposeRuntimeAsync';
-import { ensureDockerComposeRuntimeAsync } from '../application/ensureDockerComposeRuntimeAsync';
-import { getDockerComposeStatusAsync } from '../application/getDockerComposeStatusAsync';
-import { planDockerComposeRuntimeAsync } from '../application/planDockerComposeRuntimeAsync';
-import { suspendDockerComposeRuntimeAsync } from '../application/suspendDockerComposeRuntimeAsync';
-import { validateDockerComposeRuntimeAsync } from '../application/validateDockerComposeRuntimeAsync';
+import { infraAdapterDescriptor } from '../../../constants/infra.js';
+import type { DockerComposeAdapterOptions } from '../../../types/dockerComposeRuntime.js';
+import { createDockerComposeCliControlPlane } from '../adapters/createDockerComposeCliControlPlane.js';
+import { destroyDockerComposeRuntimeAsync } from '../application/destroyDockerComposeRuntimeAsync.js';
+import { ensureDockerComposeRuntimeAsync } from '../application/ensureDockerComposeRuntimeAsync.js';
+import { getDockerComposeStatusAsync } from '../application/getDockerComposeStatusAsync.js';
+import { planDockerComposeRuntimeAsync } from '../application/planDockerComposeRuntimeAsync.js';
+import { suspendDockerComposeRuntimeAsync } from '../application/suspendDockerComposeRuntimeAsync.js';
+import { validateDockerComposeRuntimeAsync } from '../application/validateDockerComposeRuntimeAsync.js';
 
 /***
  * Create the canonical Docker Compose runtime adapter entrypoint.

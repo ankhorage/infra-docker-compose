@@ -15,7 +15,7 @@ export function validateDockerComposeWorkloads(
       });
     }
     ids.add(workload.id);
-    for (const dependency of workload.dependsOn ?? []) {
+    for (const dependency of Object.keys(workload.dependsOn ?? {})) {
       if (!workloads.some(({ id }) => id === dependency)) {
         diagnostics.push({
           severity: 'error',

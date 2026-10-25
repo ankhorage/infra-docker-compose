@@ -3,8 +3,8 @@ import type { InfraResult } from '@ankhorage/contracts/infra';
 import type {
   DockerComposeEngineSession,
   DockerComposeSessionResolver,
-} from '../../../types/dockerComposeProcess';
-import { createSubprocessDockerComposeCommandRunner } from './createSubprocessDockerComposeCommandRunner';
+} from '../../../types/dockerComposeProcess.js';
+import { createSubprocessDockerComposeCommandRunner } from './createSubprocessDockerComposeCommandRunner.js';
 
 /** Create the default resolver for the current local Docker engine. */
 export function createLocalDockerComposeSessionResolver(): DockerComposeSessionResolver {

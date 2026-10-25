@@ -8,10 +8,10 @@ import type {
   DockerComposeSecret,
   DockerComposeService,
   DockerComposeVolume,
-} from '../../../types/dockerComposeRuntime';
-import { createDockerComposeNetwork } from '../utils/dockerComposeResourceFactories';
-import { projectDockerComposeWorkload } from './projectDockerComposeWorkload';
-import { validateDockerComposeWorkloads } from './validateDockerComposeWorkloads';
+} from '../../../types/dockerComposeRuntime.js';
+import { createDockerComposeNetwork } from '../utils/dockerComposeResourceFactories.js';
+import { projectDockerComposeWorkload } from './projectDockerComposeWorkload.js';
+import { validateDockerComposeWorkloads } from './validateDockerComposeWorkloads.js';
 
 /***
  * Project portable workloads into deterministic Compose services, networks, volumes, configs and

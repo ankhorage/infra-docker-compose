@@ -1,12 +1,12 @@
 import { expect, it } from 'bun:test';
 
-import { reconcileDockerComposeProjectAsync } from './features/compose-runtime/adapters/reconcileDockerComposeProjectAsync';
+import { reconcileDockerComposeProjectAsync } from './features/compose-runtime/adapters/reconcileDockerComposeProjectAsync.js';
 import type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
   DockerComposeExecutionProject,
-} from './index';
+} from './index.js';
 
 it('reconciles Compose input through stdin and then re-inspects exact owned state', async () => {
   const runner = new RecordingRunner([

@@ -12,8 +12,8 @@ import type {
   DockerComposeProjectIdentity,
   DockerComposeSecret,
   DockerComposeVolume,
-} from '../../../types/dockerComposeRuntime';
-import { toComposeName } from './getDockerComposeProjectIdentity';
+} from '../../../types/dockerComposeRuntime.js';
+import { toComposeName } from './getDockerComposeProjectIdentity.js';
 
 export function createDockerComposeNetwork(
   context: InfraExecutionContext,

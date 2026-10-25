@@ -1,4 +1,4 @@
-import type { DockerComposeResourceObservation } from '../../../types/dockerComposeRuntime';
+import type { DockerComposeResourceObservation } from '../../../types/dockerComposeRuntime.js';
 
 /** Aggregate several Docker containers into one logical Compose service observation. */
 export function mergeDockerComposeServiceReplicas(

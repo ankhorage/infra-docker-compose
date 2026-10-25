@@ -8,8 +8,8 @@ import type {
 import type {
   DockerComposeAdapterOptions,
   DockerComposeDesiredState,
-} from '../../../types/dockerComposeRuntime';
-import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync.js';
 
 /*** Return status for every resource owned by the exact Compose project. */
 export async function getDockerComposeStatusAsync(

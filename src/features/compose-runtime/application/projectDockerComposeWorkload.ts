@@ -12,7 +12,7 @@ import type {
   DockerComposeSecret,
   DockerComposeService,
   DockerComposeVolume,
-} from '../../../types/dockerComposeRuntime';
+} from '../../../types/dockerComposeRuntime.js';
 import {
   createDockerComposeConfig,
   createDockerComposeOwner,
@@ -20,9 +20,9 @@ import {
   createDockerComposeVolume,
   getDockerComposeVolumeName,
   hashDockerComposeResource,
-} from '../utils/dockerComposeResourceFactories';
-import { toComposeName } from '../utils/getDockerComposeProjectIdentity';
-import { resolveDockerComposeValue } from './resolveDockerComposeValue';
+} from '../utils/dockerComposeResourceFactories.js';
+import { toComposeName } from '../utils/getDockerComposeProjectIdentity.js';
+import { resolveDockerComposeValue } from './resolveDockerComposeValue.js';
 
 interface WorkloadProjectionRequest {
   readonly context: InfraExecutionContext;
@@ -57,7 +57,7 @@ export function projectDockerComposeWorkload(
   request: WorkloadProjectionRequest,
 ): InfraResult<WorkloadProjection> {
   const { context, identity, network, workload } = request;
-  const volumes = (workload.persistence ?? []).map((volume) =>
+  const volumes = Object.values(workload.persistence ?? {}).map((volume) =>
     createDockerComposeVolume(context, identity, workload.id, volume),
   );
   const environment = projectEnvironment(request);
@@ -71,7 +71,7 @@ export function projectDockerComposeWorkload(
     ...environment.value.secrets.map(({ owner }) => owner),
     ...files.value.secrets.map(({ owner }) => owner),
   ];
-  const workloadOwners = (workload.dependsOn ?? []).map((id) =>
+  const workloadOwners = Object.keys(workload.dependsOn ?? {}).map((id) =>
     createDockerComposeOwner(context, `service:${id}`, false, 'delete-on-destroy', []),
   );
   const owner = createDockerComposeOwner(
@@ -132,12 +132,12 @@ function projectFiles(request: WorkloadProjectionRequest): InfraResult<FileProje
   const secrets: DockerComposeSecret[] = [];
   const configMounts: { source: string; target: string }[] = [];
   const secretMounts: { source: string; target: string }[] = [];
-  for (const [index, file] of (request.workload.files ?? []).entries()) {
+  for (const [index, [path, content]] of Object.entries(request.workload.files ?? {}).entries()) {
     const resolved = resolveDockerComposeValue(
       request.outputs,
-      file.content,
+      content,
       request.workload.id,
-      `file ${file.path}`,
+      `file ${path}`,
     );
     if (!resolved.ok) return resolved;
     if (resolved.value.kind === 'public') {
@@ -146,11 +146,11 @@ function projectFiles(request: WorkloadProjectionRequest): InfraResult<FileProje
         request.identity,
         request.workload.id,
         index,
-        file.path,
+        path,
         resolved.value.value,
       );
       configs.push(config);
-      configMounts.push({ source: config.name, target: file.path });
+      configMounts.push({ source: config.name, target: path });
     } else {
       const secret = createDockerComposeSecret(
         request.context,
@@ -158,10 +158,10 @@ function projectFiles(request: WorkloadProjectionRequest): InfraResult<FileProje
         request.workload.id,
         `file-${index}`,
         resolved.value.segments,
-        { kind: 'file', path: file.path },
+        { kind: 'file', path },
       );
       secrets.push(secret);
-      secretMounts.push({ source: secret.name, target: file.path });
+      secretMounts.push({ source: secret.name, target: path });
     }
   }
   return { ok: true, value: { configs, secrets, configMounts, secretMounts }, diagnostics: [] };
@@ -185,12 +185,12 @@ function createService(
     secretEnvironment: environment.bindings,
     configMounts: files.configMounts,
     secretMounts: files.secretMounts,
-    volumes: (workload.persistence ?? []).map((volume) => ({
+    volumes: Object.values(workload.persistence ?? {}).map((volume) => ({
       source: getDockerComposeVolumeName(identity, workload.id, volume.id),
       target: volume.mountPath,
     })),
-    ports: (workload.ports ?? []).map((port) => ({
-      name: port.name,
+    ports: Object.entries(workload.ports ?? {}).map(([name, port]) => ({
+      name,
       target: port.port,
       protocol: port.protocol ?? 'tcp',
       published: workload.exposure === 'public',

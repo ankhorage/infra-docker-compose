@@ -1,6 +1,6 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeTargetAccess } from './dockerComposeRuntime';
+import type { DockerComposeTargetAccess } from './dockerComposeRuntime.js';
 
 /** One shell-free process invocation used by the Docker Compose CLI adapter. */
 export interface DockerComposeCommandRequest {

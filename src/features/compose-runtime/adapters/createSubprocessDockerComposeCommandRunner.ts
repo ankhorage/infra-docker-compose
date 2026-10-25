@@ -4,7 +4,7 @@ import type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
-} from '../../../types/dockerComposeProcess';
+} from '../../../types/dockerComposeProcess.js';
 
 /*** Create the concrete shell-free subprocess boundary used by Docker Compose operations. */
 export function createSubprocessDockerComposeCommandRunner(): DockerComposeCommandRunner {

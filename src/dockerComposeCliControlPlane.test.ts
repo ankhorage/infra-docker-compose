@@ -8,11 +8,11 @@ import type {
   DockerComposeProject,
   DockerComposeSessionResolver,
   DockerComposeTargetAccess,
-} from './index';
+} from './index.js';
 import {
   createDockerComposeCliControlPlane,
   createLocalDockerComposeSessionResolver,
-} from './index';
+} from './index.js';
 
 const localAccess: DockerComposeTargetAccess = {
   target: { id: 'local', kind: 'local-host', os: 'linux', architecture: 'amd64' },

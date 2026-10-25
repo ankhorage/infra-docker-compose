@@ -3,8 +3,8 @@ import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/in
 import type {
   DockerComposeAdapterOptions,
   DockerComposeDesiredState,
-} from '../../../types/dockerComposeRuntime';
-import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { prepareDockerComposeRuntimeAsync } from './prepareDockerComposeRuntimeAsync.js';
 
 /*** Validate target, portable workloads and Compose prerequisites without mutation. */
 export async function validateDockerComposeRuntimeAsync(

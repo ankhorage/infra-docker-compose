@@ -7,8 +7,8 @@ import type {
 } from '@ankhorage/contracts/infra';
 import { expect, it } from 'bun:test';
 
-import { createInfraAdapter, projectDockerComposeProject } from './index';
-import { FakeDockerComposeControlPlane } from './runtimeFixtures.test';
+import { createInfraAdapter, projectDockerComposeProject } from './index.js';
+import { FakeDockerComposeControlPlane } from './runtimeFixtures.test.js';
 
 it('plans and converges the complete portable Compose lifecycle', async () => {
   const controlPlane = new FakeDockerComposeControlPlane();
@@ -149,23 +149,23 @@ function createDesired(
   const workload: InfraWorkloadSpec = {
     id: 'api',
     artifact: { kind: 'image', image: 'registry.example/api@sha256:abc' },
-    ports: [{ name: 'http', port: 8080, publishedPort: 18_080 }],
+    ports: { http: { port: 8080, publishedPort: 18_080 } },
     exposure: 'public',
     environment: {
       MODE: { kind: 'literal', value: 'production' },
       ...(withSecrets ? { TOKEN: { kind: 'secret' as const, reference: secret } } : {}),
     },
-    files: [
-      { path: '/app/config.json', content: { kind: 'literal', value: '{}' } },
+    files: {
+      '/app/config.json': { kind: 'literal', value: '{}' },
       ...(withSecrets
-        ? [{ path: '/run/secrets/token', content: { kind: 'secret' as const, reference: secret } }]
-        : []),
-    ],
+        ? { '/run/secrets/token': { kind: 'secret' as const, reference: secret } }
+        : {}),
+    },
     ...(persistent
       ? {
-          persistence: [
-            { id: 'data', mountPath: '/data', sizeGiB: 1, retention: 'delete-on-destroy' },
-          ],
+          persistence: {
+            data: { id: 'data', mountPath: '/data', sizeGiB: 1, retention: 'delete-on-destroy' },
+          },
         }
       : {}),
   };
@@ -211,6 +211,7 @@ function createContext(environment: 'local' | 'production'): InfraExecutionConte
       networking: { domain: 'api.sample.test' },
     },
     credentials: {
+      findAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
       resolveAsync: ({ name }) => {
         const value: Readonly<Record<string, string>> =
           name === 'SERVICE_BOOTSTRAP'
@@ -222,6 +223,7 @@ function createContext(environment: 'local' | 'production'): InfraExecutionConte
           diagnostics: [],
         });
       },
+      persistAsync: () => Promise.resolve({ ok: true, value: null, diagnostics: [] }),
     },
     secrets: {
       resolveAsync: () => Promise.resolve({ ok: true, value: 'runtime-secret', diagnostics: [] }),

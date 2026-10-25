@@ -3,7 +3,7 @@ import type { InfraOwnedResource } from '@ankhorage/contracts/infra';
 import type {
   DockerComposeProject,
   DockerComposeResource,
-} from '../../../types/dockerComposeRuntime';
+} from '../../../types/dockerComposeRuntime.js';
 
 /** Return the deterministic dependency-first resource sequence. */
 export function getDockerComposeResources(

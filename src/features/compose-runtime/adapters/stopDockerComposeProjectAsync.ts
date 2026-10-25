@@ -1,9 +1,9 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
-import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime';
-import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters';
-import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
+import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime.js';
+import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters.js';
+import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync.js';
 
 /*** Stop only running service containers in the exact ownership scope. */
 export async function stopDockerComposeProjectAsync(

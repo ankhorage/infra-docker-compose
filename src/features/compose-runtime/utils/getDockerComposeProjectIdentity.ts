@@ -1,6 +1,6 @@
 import type { InfraExecutionContext, InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime';
+import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime.js';
 
 /** Resolve the canonical Docker Compose project identity. */
 export function getDockerComposeProjectIdentity(

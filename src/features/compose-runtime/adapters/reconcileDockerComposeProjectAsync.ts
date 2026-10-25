@@ -1,15 +1,15 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
 import type {
   DockerComposeExecutionProject,
   DockerComposeProjectObservation,
-} from '../../../types/dockerComposeRuntime';
-import { orderDockerComposeResourceIdsForRemoval } from '../utils/orderDockerComposeResourceIdsForRemoval';
-import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync';
-import { removeDockerComposeResourcesAsync } from './removeDockerComposeResourcesAsync';
-import { renderDockerComposeCliInput } from './renderDockerComposeCliInput';
-import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { orderDockerComposeResourceIdsForRemoval } from '../utils/orderDockerComposeResourceIdsForRemoval.js';
+import { inspectDockerComposeProjectAsync } from './inspectDockerComposeProjectAsync.js';
+import { removeDockerComposeResourcesAsync } from './removeDockerComposeResourcesAsync.js';
+import { renderDockerComposeCliInput } from './renderDockerComposeCliInput.js';
+import { runDockerComposeCommandAsync } from './runDockerComposeCommandAsync.js';
 
 /*** Converge one exact Compose project from stdin and remove only explicitly selected stale resources. */
 export async function reconcileDockerComposeProjectAsync(

@@ -1,5 +1,5 @@
-import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime';
-import { DOCKER_COMPOSE_LABELS } from './dockerComposeLabels';
+import type { DockerComposeProjectIdentity } from '../../../types/dockerComposeRuntime.js';
+import { DOCKER_COMPOSE_LABELS } from './dockerComposeLabels.js';
 
 /** Return exact Docker CLI filters for the selected Infra ownership scope. */
 export function getDockerComposeOwnershipFilters(

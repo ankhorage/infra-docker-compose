@@ -1,7 +1,7 @@
 import { expect, it } from 'bun:test';
 
-import { parseDockerComposeInspection } from './features/compose-runtime/adapters/parseDockerComposeInspection';
-import { DOCKER_COMPOSE_LABELS } from './features/compose-runtime/utils/dockerComposeLabels';
+import { parseDockerComposeInspection } from './features/compose-runtime/adapters/parseDockerComposeInspection.js';
+import { DOCKER_COMPOSE_LABELS } from './features/compose-runtime/utils/dockerComposeLabels.js';
 
 const identity = {
   projectId: 'sample',

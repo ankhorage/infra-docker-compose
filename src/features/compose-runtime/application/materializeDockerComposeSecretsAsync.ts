@@ -5,7 +5,7 @@ import type {
   DockerComposeMaterializedSecret,
   DockerComposeProject,
   DockerComposeSecretValueSegment,
-} from '../../../types/dockerComposeRuntime';
+} from '../../../types/dockerComposeRuntime.js';
 
 /*** Resolve secret references immediately before Compose reconciliation. */
 export async function materializeDockerComposeSecretsAsync(

@@ -1,6 +1,6 @@
 import { expect, it } from 'bun:test';
 
-import { createSubprocessDockerComposeCommandRunner } from './index';
+import { createSubprocessDockerComposeCommandRunner } from './index.js';
 
 it('executes argv, stdin and execution-only environment values without a shell', async () => {
   const runner = createSubprocessDockerComposeCommandRunner();

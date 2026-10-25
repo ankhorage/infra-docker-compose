@@ -8,7 +8,7 @@ import type {
   DockerComposeProjectObservation,
   DockerComposeResourceObservation,
   DockerComposeTargetAccess,
-} from './index';
+} from './index.js';
 
 /** Generic in-memory Docker Compose control-plane fixture. */
 export class FakeDockerComposeControlPlane implements DockerComposeControlPlane {

@@ -1,17 +1,17 @@
 /** Public Docker Compose runtime adapter package boundary. */
-export { infraAdapterDescriptor } from './constants/infra';
-export { createDockerComposeCliControlPlane } from './features/compose-runtime/adapters/createDockerComposeCliControlPlane';
-export { createLocalDockerComposeSessionResolver } from './features/compose-runtime/adapters/createLocalDockerComposeSessionResolver';
-export { createSubprocessDockerComposeCommandRunner } from './features/compose-runtime/adapters/createSubprocessDockerComposeCommandRunner';
-export { projectDockerComposeProject } from './features/compose-runtime/application/projectDockerComposeProject';
-export { createInfraAdapter } from './features/compose-runtime/composition/createInfraAdapter';
+export { infraAdapterDescriptor } from './constants/infra.js';
+export { createDockerComposeCliControlPlane } from './features/compose-runtime/adapters/createDockerComposeCliControlPlane.js';
+export { createLocalDockerComposeSessionResolver } from './features/compose-runtime/adapters/createLocalDockerComposeSessionResolver.js';
+export { createSubprocessDockerComposeCommandRunner } from './features/compose-runtime/adapters/createSubprocessDockerComposeCommandRunner.js';
+export { projectDockerComposeProject } from './features/compose-runtime/application/projectDockerComposeProject.js';
+export { createInfraAdapter } from './features/compose-runtime/composition/createInfraAdapter.js';
 export type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
   DockerComposeEngineSession,
   DockerComposeSessionResolver,
-} from './types/dockerComposeProcess';
+} from './types/dockerComposeProcess.js';
 export type {
   DockerComposeAdapterOptions,
   DockerComposeConfig,
@@ -31,4 +31,4 @@ export type {
   DockerComposeService,
   DockerComposeTargetAccess,
   DockerComposeVolume,
-} from './types/dockerComposeRuntime';
+} from './types/dockerComposeRuntime.js';

@@ -1,4 +1,4 @@
-import { DOCKER_COMPOSE_LABELS } from './dockerComposeLabels';
+import { DOCKER_COMPOSE_LABELS } from './dockerComposeLabels.js';
 import {
   getString,
   optionalArray,
@@ -7,7 +7,7 @@ import {
   requireRecord,
   requireString,
   requireStringArray,
-} from './dockerJson';
+} from './dockerJson.js';
 
 type DockerResourceKind = 'network' | 'volume' | 'config' | 'secret' | 'service';
 

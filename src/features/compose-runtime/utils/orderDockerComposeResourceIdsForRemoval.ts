@@ -1,4 +1,4 @@
-import type { DockerComposeResourceObservation } from '../../../types/dockerComposeRuntime';
+import type { DockerComposeResourceObservation } from '../../../types/dockerComposeRuntime.js';
 
 /** Return selected resources in reverse dependency order for safe teardown. */
 export function orderDockerComposeResourceIdsForRemoval(

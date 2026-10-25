@@ -1,12 +1,12 @@
 import type { InfraResult } from '@ankhorage/contracts/infra';
 
-import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess';
+import type { DockerComposeEngineSession } from '../../../types/dockerComposeProcess.js';
 import type {
   DockerComposeProjectIdentity,
   DockerComposeProjectObservation,
-} from '../../../types/dockerComposeRuntime';
-import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters';
-import { parseDockerComposeInspection } from './parseDockerComposeInspection';
+} from '../../../types/dockerComposeRuntime.js';
+import { getDockerComposeOwnershipFilters } from '../utils/getDockerComposeOwnershipFilters.js';
+import { parseDockerComposeInspection } from './parseDockerComposeInspection.js';
 
 /*** Inspect only Docker resources carrying the exact project/environment/adapter ownership scope. */
 export async function inspectDockerComposeProjectAsync(

@@ -1,12 +1,12 @@
 import { expect, it } from 'bun:test';
 
-import { stopDockerComposeProjectAsync } from './features/compose-runtime/adapters/stopDockerComposeProjectAsync';
-import { waitForDockerComposeProjectAsync } from './features/compose-runtime/adapters/waitForDockerComposeProjectAsync';
+import { stopDockerComposeProjectAsync } from './features/compose-runtime/adapters/stopDockerComposeProjectAsync.js';
+import { waitForDockerComposeProjectAsync } from './features/compose-runtime/adapters/waitForDockerComposeProjectAsync.js';
 import type {
   DockerComposeCommandRequest,
   DockerComposeCommandResult,
   DockerComposeCommandRunner,
-} from './index';
+} from './index.js';
 
 const identity = {
   projectId: 'sample',

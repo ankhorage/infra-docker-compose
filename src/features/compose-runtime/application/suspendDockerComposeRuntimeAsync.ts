@@ -8,9 +8,9 @@ import type {
 import type {
   DockerComposeAdapterOptions,
   DockerComposeDesiredState,
-} from '../../../types/dockerComposeRuntime';
-import { createObservedDockerComposeOwner } from '../utils/getDockerComposeResources';
-import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync';
+} from '../../../types/dockerComposeRuntime.js';
+import { createObservedDockerComposeOwner } from '../utils/getDockerComposeResources.js';
+import { resolveDockerComposeTargetAsync } from '../utils/resolveDockerComposeTargetAsync.js';
 
 /*** Stop Compose services while retaining networks, configs, secrets and volumes. */
 export async function suspendDockerComposeRuntimeAsync(
