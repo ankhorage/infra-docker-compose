@@ -14,7 +14,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.5.5",
+      "value": "v0.5.6",
       "color": "cb3837"
     },
     {
@@ -2058,7 +2058,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeRuntime.test.ts",
-        "line": 232,
+        "line": 234,
         "column": 1
       }
     },
@@ -2085,7 +2085,7 @@
       "description": "Create one canonical secret reference.",
       "sourceLocation": {
         "filePath": "src/dockerComposeTemplates.test.ts",
-        "line": 89,
+        "line": 91,
         "column": 1
       }
     },

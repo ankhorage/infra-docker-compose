@@ -1,5 +1,11 @@
 # @ankhorage/docker-compose
 
+## 0.5.6
+
+### Patch Changes
+
+- c990d14: Update the Docker Compose adapter for the canonical Contracts infrastructure catalog and keyed workload collections.
+
 ## 0.5.5
 
 ### Patch Changes
