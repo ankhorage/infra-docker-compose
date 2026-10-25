@@ -128,7 +128,7 @@ Source: `src/types/dockerComposeRuntime.ts:58:1`
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:142:1`
+Source: `src/types/dockerComposeRuntime.ts:143:1`
 
 ### Members
 
@@ -145,7 +145,7 @@ Source: `src/types/dockerComposeRuntime.ts:142:1`
 
 Kind: `unknown`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:177:1`
+Source: `src/types/dockerComposeRuntime.ts:178:1`
 
 ## DockerComposeEngineSession
 
@@ -166,7 +166,7 @@ Source: `src/types/dockerComposeProcess.ts:27:1`
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:120:1`
+Source: `src/types/dockerComposeRuntime.ts:121:1`
 
 ### Members
 
@@ -183,7 +183,7 @@ Source: `src/types/dockerComposeRuntime.ts:120:1`
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:115:1`
+Source: `src/types/dockerComposeRuntime.ts:116:1`
 
 ### Members
 
@@ -215,13 +215,13 @@ Source: `src/types/dockerComposeRuntime.ts:47:1`
 
 Kind: `unknown`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:178:1`
+Source: `src/types/dockerComposeRuntime.ts:179:1`
 
 ## DockerComposeProject
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:106:1`
+Source: `src/types/dockerComposeRuntime.ts:107:1`
 
 ### Members
 
@@ -252,7 +252,7 @@ Source: `src/types/dockerComposeRuntime.ts:19:1`
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:136:1`
+Source: `src/types/dockerComposeRuntime.ts:137:1`
 
 ### Members
 
@@ -265,13 +265,13 @@ Source: `src/types/dockerComposeRuntime.ts:136:1`
 
 Kind: `unknown`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:179:1`
+Source: `src/types/dockerComposeRuntime.ts:180:1`
 
 ## DockerComposeResourceObservation
 
 Kind: `type`
 Module: `src/types/dockerComposeRuntime.ts`
-Source: `src/types/dockerComposeRuntime.ts:124:1`
+Source: `src/types/dockerComposeRuntime.ts:125:1`
 
 ### Members
 
@@ -318,24 +318,24 @@ Source: `src/types/dockerComposeRuntime.ts:81:1`
 
 ### Members
 
-| Name              | Kind     | Type                                                                                                                             | Required | Description |
-| ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| args              | property | `readonly string[] \| undefined`                                                                                                 | no       |             |
-| command           | property | `readonly string[] \| undefined`                                                                                                 | no       |             |
-| configMounts      | property | `readonly { readonly source: string; readonly target: string; }[]`                                                               | yes      |             |
-| configurationHash | property | `string`                                                                                                                         | yes      |             |
-| environment       | property | `Readonly<Record<string, string>>`                                                                                               | yes      |             |
-| health            | property | `InfraWorkloadHealthSpec \| undefined`                                                                                           | no       |             |
-| image             | property | `string`                                                                                                                         | yes      |             |
-| kind              | property | `"service"`                                                                                                                      | yes      |             |
-| name              | property | `string`                                                                                                                         | yes      |             |
-| owner             | property | `InfraOwnedResource`                                                                                                             | yes      |             |
-| ports             | property | `readonly { readonly name: string; readonly target: number; readonly protocol: "tcp" \| "udp"; readonly published: boolean; }[]` | yes      |             |
-| replicas          | property | `number`                                                                                                                         | yes      |             |
-| resources         | property | `InfraWorkloadResourceSpec \| undefined`                                                                                         | no       |             |
-| secretEnvironment | property | `Readonly<Record<string, string>>`                                                                                               | yes      |             |
-| secretMounts      | property | `readonly { readonly source: string; readonly target: string; }[]`                                                               | yes      |             |
-| volumes           | property | `readonly { readonly source: string; readonly target: string; }[]`                                                               | yes      |             |
+| Name              | Kind     | Type                                                                                                                                                              | Required | Description |
+| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| args              | property | `readonly string[] \| undefined`                                                                                                                                  | no       |             |
+| command           | property | `readonly string[] \| undefined`                                                                                                                                  | no       |             |
+| configMounts      | property | `readonly { readonly source: string; readonly target: string; }[]`                                                                                                | yes      |             |
+| configurationHash | property | `string`                                                                                                                                                          | yes      |             |
+| environment       | property | `Readonly<Record<string, string>>`                                                                                                                                | yes      |             |
+| health            | property | `InfraWorkloadHealthSpec \| undefined`                                                                                                                            | no       |             |
+| image             | property | `string`                                                                                                                                                          | yes      |             |
+| kind              | property | `"service"`                                                                                                                                                       | yes      |             |
+| name              | property | `string`                                                                                                                                                          | yes      |             |
+| owner             | property | `InfraOwnedResource`                                                                                                                                              | yes      |             |
+| ports             | property | `readonly { readonly name: string; readonly target: number; readonly protocol: "tcp" \| "udp"; readonly published: boolean; readonly publishedPort?: number; }[]` | yes      |             |
+| replicas          | property | `number`                                                                                                                                                          | yes      |             |
+| resources         | property | `InfraWorkloadResourceSpec \| undefined`                                                                                                                          | no       |             |
+| secretEnvironment | property | `Readonly<Record<string, string>>`                                                                                                                                | yes      |             |
+| secretMounts      | property | `readonly { readonly source: string; readonly target: string; }[]`                                                                                                | yes      |             |
+| volumes           | property | `readonly { readonly source: string; readonly target: string; }[]`                                                                                                | yes      |             |
 
 ## DockerComposeSessionResolver
 

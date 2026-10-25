@@ -1,6 +1,6 @@
 {
-  "packageName": "@ankhorage/docker-compose",
-  "packageId": "@ankhorage/docker-compose",
+  "packageName": "@ankhorage/infra-docker-compose",
+  "packageId": "@ankhorage/infra-docker-compose",
   "description": "Docker Compose runtime adapter for provider-neutral Ankhorage infrastructure.",
   "collaborators": null,
   "donation": null,
@@ -14,7 +14,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.3.0",
+      "value": "v0.5.5",
       "color": "cb3837"
     },
     {
@@ -920,7 +920,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 142,
+        "line": 143,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -987,7 +987,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 177,
+        "line": 178,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1052,7 +1052,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 120,
+        "line": 121,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1120,7 +1120,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 115,
+        "line": 116,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1228,7 +1228,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 178,
+        "line": 179,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1246,7 +1246,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 106,
+        "line": 107,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1354,7 +1354,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 136,
+        "line": 137,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1387,7 +1387,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 179,
+        "line": 180,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1405,7 +1405,7 @@
       "modulePath": "src/types/dockerComposeRuntime.ts",
       "sourceLocation": {
         "filePath": "src/types/dockerComposeRuntime.ts",
-        "line": 124,
+        "line": 125,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1646,7 +1646,7 @@
         {
           "name": "ports",
           "kind": "property",
-          "type": "readonly { readonly name: string; readonly target: number; readonly protocol: \"tcp\" | \"udp\"; readonly published: boolean; }[]",
+          "type": "readonly { readonly name: string; readonly target: number; readonly protocol: \"tcp\" | \"udp\"; readonly published: boolean; readonly publishedPort?: number; }[]",
           "required": true,
           "description": null
         },
@@ -1878,7 +1878,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeCliInput.test.ts",
-        "line": 60,
+        "line": 91,
         "column": 1
       }
     },
@@ -1887,7 +1887,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeCliInput.test.ts",
-        "line": 77,
+        "line": 112,
+        "column": 1
+      }
+    },
+    {
+      "name": "createConfig",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/dockerComposeCliInput.test.ts",
+        "line": 131,
         "column": 1
       }
     },
@@ -1896,7 +1905,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeCliInput.test.ts",
-        "line": 96,
+        "line": 141,
+        "column": 1
+      }
+    },
+    {
+      "name": "createDependencyService",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/dockerComposeCliInput.test.ts",
+        "line": 152,
         "column": 1
       }
     },
@@ -1905,7 +1923,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeCliInput.test.ts",
-        "line": 107,
+        "line": 170,
         "column": 1
       }
     },
@@ -2013,7 +2031,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeRuntime.test.ts",
-        "line": 129,
+        "line": 138,
         "column": 1
       }
     },
@@ -2022,7 +2040,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeRuntime.test.ts",
-        "line": 171,
+        "line": 180,
         "column": 1
       }
     },
@@ -2031,7 +2049,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeRuntime.test.ts",
-        "line": 190,
+        "line": 199,
         "column": 1
       }
     },
@@ -2040,7 +2058,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/dockerComposeRuntime.test.ts",
-        "line": 223,
+        "line": 232,
         "column": 1
       }
     },
@@ -2382,7 +2400,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 75,
+        "line": 78,
         "column": 1
       }
     },
@@ -2391,7 +2409,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 86,
+        "line": 89,
         "column": 1
       }
     },
@@ -2400,7 +2418,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 106,
+        "line": 110,
         "column": 1
       }
     },
@@ -2409,7 +2427,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 121,
+        "line": 125,
         "column": 1
       }
     },
@@ -2418,7 +2436,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 141,
+        "line": 145,
         "column": 1
       }
     },
@@ -2427,7 +2445,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 154,
+        "line": 163,
         "column": 1
       }
     },
@@ -2436,7 +2454,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 169,
+        "line": 187,
         "column": 1
       }
     },
@@ -2445,7 +2463,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 188,
+        "line": 206,
         "column": 1
       }
     },
@@ -2454,7 +2472,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 208,
+        "line": 226,
         "column": 1
       }
     },
@@ -2463,7 +2481,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 223,
+        "line": 241,
         "column": 1
       }
     },
@@ -2472,7 +2490,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 242,
+        "line": 260,
         "column": 1
       }
     },
@@ -2481,7 +2499,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 252,
+        "line": 270,
+        "column": 1
+      }
+    },
+    {
+      "name": "escapeComposeInterpolation",
+      "description": "Escape literal dollar signs so Compose interpolation preserves config payload bytes.",
+      "sourceLocation": {
+        "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
+        "line": 280,
         "column": 1
       }
     },
@@ -2490,7 +2517,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
-        "line": 261,
+        "line": 284,
         "column": 1
       }
     },
@@ -3922,8 +3949,20 @@
       },
       {
         "fromSymbol": "createExecutionProject",
+        "toSymbol": "createConfig",
+        "callExpression": "createConfig",
+        "sourcePath": "src/dockerComposeCliInput.test.ts"
+      },
+      {
+        "fromSymbol": "createExecutionProject",
         "toSymbol": "createSecret",
         "callExpression": "createSecret",
+        "sourcePath": "src/dockerComposeCliInput.test.ts"
+      },
+      {
+        "fromSymbol": "createExecutionProject",
+        "toSymbol": "createDependencyService",
+        "callExpression": "createDependencyService",
         "sourcePath": "src/dockerComposeCliInput.test.ts"
       },
       {
@@ -3933,7 +3972,19 @@
         "sourcePath": "src/dockerComposeCliInput.test.ts"
       },
       {
+        "fromSymbol": "createConfig",
+        "toSymbol": "createOwner",
+        "callExpression": "createOwner",
+        "sourcePath": "src/dockerComposeCliInput.test.ts"
+      },
+      {
         "fromSymbol": "createSecret",
+        "toSymbol": "createOwner",
+        "callExpression": "createOwner",
+        "sourcePath": "src/dockerComposeCliInput.test.ts"
+      },
+      {
+        "fromSymbol": "createDependencyService",
         "toSymbol": "createOwner",
         "callExpression": "createOwner",
         "sourcePath": "src/dockerComposeCliInput.test.ts"
@@ -4794,6 +4845,12 @@
         "fromSymbol": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
         "toSymbol": "resourceLabels",
         "callExpression": "resourceLabels",
+        "sourcePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts"
+      },
+      {
+        "fromSymbol": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts",
+        "toSymbol": "escapeComposeInterpolation",
+        "callExpression": "escapeComposeInterpolation",
         "sourcePath": "src/features/compose-runtime/adapters/renderDockerComposeCliInput.ts"
       },
       {

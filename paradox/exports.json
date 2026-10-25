@@ -322,7 +322,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 142,
+      "line": 143,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -389,7 +389,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 177,
+      "line": 178,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -454,7 +454,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 120,
+      "line": 121,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -522,7 +522,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 115,
+      "line": 116,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -630,7 +630,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 178,
+      "line": 179,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -648,7 +648,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 106,
+      "line": 107,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -756,7 +756,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 136,
+      "line": 137,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -789,7 +789,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 179,
+      "line": 180,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -807,7 +807,7 @@
     "modulePath": "src/types/dockerComposeRuntime.ts",
     "sourceLocation": {
       "filePath": "src/types/dockerComposeRuntime.ts",
-      "line": 124,
+      "line": 125,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -1048,7 +1048,7 @@
       {
         "name": "ports",
         "kind": "property",
-        "type": "readonly { readonly name: string; readonly target: number; readonly protocol: \"tcp\" | \"udp\"; readonly published: boolean; }[]",
+        "type": "readonly { readonly name: string; readonly target: number; readonly protocol: \"tcp\" | \"udp\"; readonly published: boolean; readonly publishedPort?: number; }[]",
         "required": true,
         "description": null
       },

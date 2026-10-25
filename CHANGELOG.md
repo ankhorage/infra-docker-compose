@@ -1,5 +1,11 @@
 # @ankhorage/docker-compose
 
+## 0.5.5
+
+### Patch Changes
+
+- 0f84685: Publish releases through npm Trusted Publishing instead of a bootstrap token.
+
 ## 0.5.4
 
 ### Patch Changes
