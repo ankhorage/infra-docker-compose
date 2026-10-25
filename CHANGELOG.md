@@ -1,5 +1,11 @@
 # @ankhorage/docker-compose
 
+## 0.5.4
+
+### Patch Changes
+
+- 10d36dd: Rename the Docker Compose infrastructure adapter package.
+
 ## 0.5.3
 
 ### Patch Changes

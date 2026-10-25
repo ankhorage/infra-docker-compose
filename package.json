@@ -1,6 +1,6 @@
 {
   "name": "@ankhorage/infra-docker-compose",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Docker Compose runtime adapter for provider-neutral Ankhorage infrastructure.",
   "type": "module",
   "main": "./dist/index.js",
