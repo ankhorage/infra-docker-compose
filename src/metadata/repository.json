@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "adapter",
+  "title": "Ankhorage Docker Compose Infrastructure",
+  "summary": "Adapts portable infrastructure workloads to deterministic Docker Compose projects and lifecycle operations.",
+  "purpose": "Provide a standalone Docker Compose runtime for local or explicitly verified Docker engines.",
+  "domain": "Docker Compose runtime infrastructure",
+  "responsibilities": [
+    "Project portable workloads into Compose services, networks, volumes, configs, and execution-only secret references.",
+    "Operate the local Docker CLI by default or an injected verified remote control plane.",
+    "Map Docker Compose lifecycle outcomes into provider-neutral infrastructure results."
+  ],
+  "boundaries": [
+    "Does not define portable infrastructure contracts.",
+    "Does not provision Docker engines or authenticate arbitrary remote daemons.",
+    "Does not introduce Kubernetes-specific workload concepts."
+  ],
+  "audience": [
+    "Infrastructure hosts selecting Docker Compose as a runtime target.",
+    "Developers running portable workloads on a local or trusted remote Docker engine."
+  ],
+  "useCases": [
+    "Project a portable workload into a deterministic Compose project.",
+    "Apply, inspect, suspend, resume, and delete a Compose-backed runtime.",
+    "Inject a verified remote Docker control plane instead of the local CLI."
+  ],
+  "architecture": {
+    "role": "An infrastructure runtime adapter translating portable workload intent into Docker Compose operations.",
+    "invariants": [
+      "Portable secret values remain execution-only and are not retained in projections.",
+      "Remote engines require an explicitly supplied verified control plane.",
+      "Compose projections remain free of Kubernetes-specific concepts."
+    ]
+  },
+  "implements": [
+    {
+      "packageName": "@ankhorage/contracts",
+      "subpath": "./infra",
+      "interfaceId": "InfraRuntimeAdapter"
+    }
+  ],
+  "constraints": {
+    "platforms": ["Docker Compose-compatible engines"],
+    "security": ["Resolved secrets are handled only at the execution boundary."],
+    "limitations": ["Docker engine provisioning is outside this adapter."]
+  }
+}
